@@ -6,7 +6,7 @@ const todosRoutes = require("./routes/todosRoutes");
 const userRoutes = require("./routes/userRoutes");
 
 const app = express();
-app.use(cors({ origin: ["http://localhost:3000","https://mmttodo-frontend.vercel.app", "https://devnitish.com"] }));
+app.use(cors({ origin: ["http://localhost:3000","https://mmttodo-frontend-iepa.vercel.app", "https://devnitish.com"] }));
 
 
 
