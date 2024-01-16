@@ -96,7 +96,7 @@ exports.login = async (req, res, next) => {
       token = jwt.sign(
         { userId: existingUser.id, email: existingUser.email },
         "supersecret_dont_share",
-        { expiresIn: "5m" }
+        { expiresIn: "15m" }
       );
     } catch (err) {
       const error = new Error("Logging in failed, please try again later.");
