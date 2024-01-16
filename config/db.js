@@ -1,8 +1,7 @@
 const mongoose = require("mongoose");
 
 let environement = process.env.ENVIRONMENT
-// let db_url = process.env.MONGO_URL
-let db_url = "mongodb+srv://nk6593289:nk6593289@cluster0.gopndzw.mongodb.net/MMTtodo"
+let db_url = process.env.MONGO_URL || "mongodb://127.0.0.1:27017/MMTtodo"
 const server = '127.0.0.1:27017'  // REPLACE WITH YOUR OWN SERVER
 const database = 'MMTtodo'           // REPLACE WITH YOUR OWN DB NAME
 const connectToDB = () => {
