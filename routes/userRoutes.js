@@ -6,6 +6,6 @@ const { signup, login, logoutFromAllDivices } = require("../controllers/userCont
 
 router.post("/signup", signup);
 router.post("/login", login);
-router.post("/logout", logoutFromAllDivices);
+router.post("/logout-from-all-device", logoutFromAllDivices);
 
 module.exports = router;

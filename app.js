@@ -17,6 +17,6 @@ app.use(express.urlencoded({ extended: true }));
 
 connectToDB();
 app.use("/user", userRoutes);
-app.use("/", todosRoutes);
+app.use("/todo", todosRoutes);
 
 module.exports = app;
