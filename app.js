@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 connectToDB();
-app.use("/", (req, res)=>{
+app.get("/", (req, res)=>{
 res.send("<h1>Hello World!</h1>")
 })
 app.use("/user", userRoutes);
