@@ -112,7 +112,7 @@ exports.mediaController = async (req, res) => {
       let FBURL = await ndown(url);
       // console.log("fb&ints: ", FBURL);
       if (FBURL.status) {
-        res.json({ url: FBURL?.data[0]?.url });
+        res.json({ status: FBURL.status, url: "", data: FBURL.data });
       }
       res.json({ url: "", msg: "Something went Wrong please try again!" });
     }
@@ -120,7 +120,7 @@ exports.mediaController = async (req, res) => {
       let FBURL = await ndown(url);
       // console.log("fb&ints: ", FBURL);
       if (FBURL.status) {
-        res.json({ url: FBURL?.data[0]?.url });
+        res.json({ status: FBURL.status, url: "", data: FBURL.data });
       }
       res.json({ url: "", msg: "Something went Wrong please try again!" });
     }
@@ -128,7 +128,7 @@ exports.mediaController = async (req, res) => {
       let YtURL = await ytdown(url);
       // console.log("fb&ints: ", YtURL);
       if (YtURL.status) {
-        res.json({ url: YtURL?.data?.url });
+        res.json({ status: YtURL.status, url: "", data: YtURL.data });
       }
       res.json({ url: "", msg: "Something went Wrong please try again!" });
     }
